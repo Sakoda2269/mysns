@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>投稿の削除</h1>
+    <p>以下の投稿をを削除しますか？</p><br><br>
+    <h4>{{ object.title }}</h4>
+    <p>{{ object.detail }}</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        <button type="submit" class="submit delete">削除する</button>
+    </form>
+    
+    <div>
+        <a href="JavaScript:history.back()">&lt; 戻る</a>
+    </div>
+{% endblock %}

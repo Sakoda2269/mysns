@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sns.apps.SnsConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -70,7 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysns.wsgi.application'
 
-LOGIN_REFIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/"
 
 
 # Database

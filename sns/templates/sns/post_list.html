@@ -2,9 +2,20 @@
 
 {% block content %}
 <h1>タイムライン</h1><br><br>
-{% for post in object_list %}
-    <a href='{% url "sns:post" post.pk %}'>
-        {{ post.title }} - {{ post.author }} - {{ post.created_at }}
-    </a>
-{% endfor %}
+<div>
+    {% for post in object_list %}
+        <a href='{% url "sns:post" post.pk %}'>
+            {{ post.title }} - {{ post.author }} - {{ post.created_at }}
+        </a>
+        <br>
+    {% endfor %}
+</div>
+<br>
+<br>
+<br>
+{% if user.is_authenticated %}
+    <div>
+        <a href='{% url "sns:create" %}'>投稿する</a>
+    </div>
+{% endif %}
 {% endblock %}
